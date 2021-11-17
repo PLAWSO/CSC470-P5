@@ -65,6 +65,11 @@
     <Compile Include="FakeIssueStatusRepository.cs" />
     <Compile Include="FakePreferenceRepository.cs" />
     <Compile Include="FakeProjectRepository.cs" />
+    <Compile Include="FormIssueSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueSelect.Designer.cs">
+      <DependentUpon>FormIssueSelect.cs</DependentUpon>
     <Compile Include="FormIssueRecorder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +132,8 @@
     <EmbeddedResource Include="FormIssueDashboard.resx">
       <DependentUpon>FormIssueDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormIssueSelect.resx">
+      <DependentUpon>FormIssueSelect.cs</DependentUpon>
     <EmbeddedResource Include="FormIssueRecorder.resx">
       <DependentUpon>FormIssueRecorder.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +166,8 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\FakeIssueRepository.datasource" />
+    <None Include="Properties\DataSources\FakeIssueRepository1.datasource" />
+    <None Include="Properties\DataSources\FakeIssueStatusRepository.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
