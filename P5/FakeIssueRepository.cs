@@ -99,6 +99,7 @@ namespace Builder
 
         public bool Remove(Issue issue)
         {
+            issueList.Remove(issue);
             return true;
         }
 

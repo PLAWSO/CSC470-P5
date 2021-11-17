@@ -205,7 +205,7 @@
             this.btnModify.TabIndex = 16;
             this.btnModify.Text = "Create Issue";
             this.btnModify.UseVisualStyleBackColor = true;
-            this.btnModify.Click += new System.EventHandler(this.Create_Click);
+            //this.btnModify.Click += new System.EventHandler(this.Create_Click);
             // 
             // FormIssueModify
             // 

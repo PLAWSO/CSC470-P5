@@ -19,6 +19,7 @@ namespace Builder
         public string _eventAction;
         public DataGridViewRow dataGridViewRow;
         public int selectedIssueId;
+        public Issue selectedIssue;
         public FormIssueSelect(int projectId, string _event)
         {
             projectID = projectId;
@@ -73,6 +74,21 @@ namespace Builder
                     FormIssueModify form = new FormIssueModify(dataGridViewRow);
                     form.ShowDialog();
                     form.Dispose();
+                }
+                else if (_eventAction == "Remove")
+                {
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove: " + dataGridViewRow.Cells[1].Value, "Confirmation", MessageBoxButtons.YesNo);
+                    selectedIssue = FakeIssueRepository.GetIssueById(selectedIssueId);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        FakeIssueRepository.Remove(selectedIssue);
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        MessageBox.Show("Remove Canceled.", "Attention");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
                 }
             }
         }
