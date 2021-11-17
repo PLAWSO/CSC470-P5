@@ -99,13 +99,23 @@ namespace Builder
 
         public bool Remove(Issue issue)
         {
-            issueList.Remove(issue);
+            issueList.RemoveAt(issue.Id);
             return true;
         }
 
         public string Modify(Issue issue)
         {
-            return "ur mom";
+            if (issue.Title == "")
+            {
+                return (EMPTY_TITLE_ERROR);
+            }
+
+            if (issue.DiscoveryDate > DateTime.Now)
+            {
+                return (FUTURE_DISCOVERY_DATETIME_ERROR);
+            }
+            issueList[issue.Id] = issue;
+            return "Success";
         }
 
         public int GetTotalNumberOfIssues(int ProjectId)

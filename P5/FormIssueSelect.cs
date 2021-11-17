@@ -74,6 +74,7 @@ namespace Builder
                     FormIssueModify form = new FormIssueModify(dataGridViewRow);
                     form.ShowDialog();
                     form.Dispose();
+                    this.Close();
                 }
                 else if (_eventAction == "Remove")
                 {
@@ -82,6 +83,7 @@ namespace Builder
                     if (dialogResult == DialogResult.Yes)
                     {
                         FakeIssueRepository.Remove(selectedIssue);
+                        this.Close();
                     }
                     else if (dialogResult == DialogResult.No)
                     {
@@ -91,6 +93,11 @@ namespace Builder
                     }
                 }
             }
+        }
+
+        private void dgdSelectIssue_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

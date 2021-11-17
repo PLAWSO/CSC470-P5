@@ -44,9 +44,10 @@ namespace Builder
             // 
             // btnSelectIssue
             // 
-            this.btnSelectIssue.Location = new System.Drawing.Point(697, 357);
+            this.btnSelectIssue.Location = new System.Drawing.Point(929, 439);
+            this.btnSelectIssue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSelectIssue.Name = "btnSelectIssue";
-            this.btnSelectIssue.Size = new System.Drawing.Size(110, 23);
+            this.btnSelectIssue.Size = new System.Drawing.Size(147, 28);
             this.btnSelectIssue.TabIndex = 1;
             this.btnSelectIssue.Text = "Select Issue";
             this.btnSelectIssue.UseVisualStyleBackColor = true;
@@ -55,9 +56,10 @@ namespace Builder
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(560, 357);
+            this.btnCancel.Location = new System.Drawing.Point(747, 439);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(110, 23);
+            this.btnCancel.Size = new System.Drawing.Size(147, 28);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -77,15 +79,19 @@ namespace Builder
             this.InitialDescription,
             this.Component,
             this.Status});
-            this.dgdSelectIssue.Location = new System.Drawing.Point(23, 12);
+            this.dgdSelectIssue.Location = new System.Drawing.Point(31, 15);
+            this.dgdSelectIssue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgdSelectIssue.MultiSelect = false;
             this.dgdSelectIssue.Name = "dgdSelectIssue";
-            this.dgdSelectIssue.Size = new System.Drawing.Size(791, 329);
+            this.dgdSelectIssue.RowHeadersWidth = 51;
+            this.dgdSelectIssue.Size = new System.Drawing.Size(1055, 405);
             this.dgdSelectIssue.TabIndex = 3;
+            this.dgdSelectIssue.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdSelectIssue_CellContentClick);
             // 
             // Id
             // 
             this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             this.Id.Width = 30;
@@ -93,6 +99,7 @@ namespace Builder
             // Title
             // 
             this.Title.HeaderText = "Title";
+            this.Title.MinimumWidth = 6;
             this.Title.Name = "Title";
             this.Title.ReadOnly = true;
             this.Title.Width = 175;
@@ -100,6 +107,7 @@ namespace Builder
             // DiscoveryDate
             // 
             this.DiscoveryDate.HeaderText = "DiscoveryDate";
+            this.DiscoveryDate.MinimumWidth = 6;
             this.DiscoveryDate.Name = "DiscoveryDate";
             this.DiscoveryDate.ReadOnly = true;
             this.DiscoveryDate.Width = 140;
@@ -107,36 +115,45 @@ namespace Builder
             // Discoverer
             // 
             this.Discoverer.HeaderText = "Discoverer";
+            this.Discoverer.MinimumWidth = 6;
             this.Discoverer.Name = "Discoverer";
             this.Discoverer.ReadOnly = true;
+            this.Discoverer.Width = 125;
             // 
             // InitialDescription
             // 
             this.InitialDescription.HeaderText = "InitialDescription";
+            this.InitialDescription.MinimumWidth = 6;
             this.InitialDescription.Name = "InitialDescription";
             this.InitialDescription.ReadOnly = true;
+            this.InitialDescription.Width = 125;
             // 
             // Component
             // 
             this.Component.HeaderText = "Component";
+            this.Component.MinimumWidth = 6;
             this.Component.Name = "Component";
             this.Component.ReadOnly = true;
+            this.Component.Width = 125;
             // 
             // Status
             // 
             this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
+            this.Status.Width = 125;
             // 
             // FormIssueSelect
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(838, 402);
+            this.ClientSize = new System.Drawing.Size(1117, 495);
             this.Controls.Add(this.dgdSelectIssue);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSelectIssue);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormIssueSelect";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Issue";

@@ -76,5 +76,24 @@ namespace Builder
             this.Close();
 
         }
+
+        private void btnModify_Click_1(object sender, EventArgs e)
+        {
+            Issue newIssue = new Issue();
+            newIssue.Id = convert;
+            newIssue.Title = TitleTextbox.Text.Trim();
+            newIssue.DiscoveryDate = DiscoveryDate.Value;
+            string discover = Discover.Text;
+            newIssue.Discoverer = discover;
+            newIssue.InitialDescription = Description.Text.Trim();
+            newIssue.IssueStatusId = StatusList.SelectedIndex + 1;
+            newIssue.Component = ComponentTextbox.Text.Trim();
+            FakeIssueRepository issueRepository = new FakeIssueRepository();
+            string result = issueRepository.Modify(newIssue);
+            if (result == "Success")
+                this.Close();
+            else
+                MessageBox.Show(result);
+        }
     }
 }
