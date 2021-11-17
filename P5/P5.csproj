@@ -70,6 +70,7 @@
     </Compile>
     <Compile Include="FormIssueSelect.Designer.cs">
       <DependentUpon>FormIssueSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIssueRecorder.cs">
       <SubType>Form</SubType>
     </Compile>
