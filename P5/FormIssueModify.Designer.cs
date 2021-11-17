@@ -1,6 +1,6 @@
 ﻿namespace Builder
 {
-    partial class FormIssueRecorder
+    partial class FormIssueModify
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Description = new System.Windows.Forms.TextBox();
             this.cancel = new System.Windows.Forms.Button();
-            this.Create = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IdLabel
@@ -196,23 +196,23 @@
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
-            // Create
+            // btnModify
             // 
-            this.Create.Location = new System.Drawing.Point(323, 472);
-            this.Create.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Create.Name = "Create";
-            this.Create.Size = new System.Drawing.Size(94, 31);
-            this.Create.TabIndex = 16;
-            this.Create.Text = "Create Issue";
-            this.Create.UseVisualStyleBackColor = true;
-            this.Create.Click += new System.EventHandler(this.Create_Click);
+            this.btnModify.Location = new System.Drawing.Point(323, 472);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(94, 31);
+            this.btnModify.TabIndex = 16;
+            this.btnModify.Text = "Create Issue";
+            this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.Create_Click);
             // 
-            // FormIssueRecorder
+            // FormIssueModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 528);
-            this.Controls.Add(this.Create);
+            this.Controls.Add(this.btnModify);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.Description);
             this.Controls.Add(this.label3);
@@ -229,9 +229,9 @@
             this.Controls.Add(this.IdTextbox);
             this.Controls.Add(this.IdLabel);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FormIssueRecorder";
+            this.Name = "FormIssueModify";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Record Issue";
+            this.Text = "Modify Issue";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,6 +254,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Description;
         private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.Button Create;
+        private System.Windows.Forms.Button btnModify;
     }
 }

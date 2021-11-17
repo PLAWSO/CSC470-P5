@@ -17,6 +17,8 @@ namespace Builder
         FakeIssueStatusRepository FakeIssueStatusRepository = new FakeIssueStatusRepository();
         public int projectID;
         public string _eventAction;
+        public DataGridViewRow dataGridViewRow;
+        public int selectedIssueId;
         public FormIssueSelect(int projectId, string _event)
         {
             projectID = projectId;
@@ -53,9 +55,25 @@ namespace Builder
 
         private void btnSelectIssue_Click(object sender, EventArgs e)
         {
-            if (_eventAction == "Modify")
+            selectedIssueId = dgdSelectIssue.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+            if (selectedIssueId < 0)
             {
-
+                DialogResult result = MessageBox.Show("An issue must be selected.", "Attention", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.Cancel)
+                {
+                    Close();
+                    return;
+                }
+            }
+            else
+            {
+                dataGridViewRow = dgdSelectIssue.Rows[selectedIssueId];
+                if (_eventAction == "Modify")
+                {
+                    FormIssueModify form = new FormIssueModify(dataGridViewRow);
+                    form.ShowDialog();
+                    form.Dispose();
+                }
             }
         }
     }

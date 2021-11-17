@@ -78,6 +78,7 @@ namespace Builder
             this.Component,
             this.Status});
             this.dgdSelectIssue.Location = new System.Drawing.Point(23, 12);
+            this.dgdSelectIssue.MultiSelect = false;
             this.dgdSelectIssue.Name = "dgdSelectIssue";
             this.dgdSelectIssue.Size = new System.Drawing.Size(791, 329);
             this.dgdSelectIssue.TabIndex = 3;
