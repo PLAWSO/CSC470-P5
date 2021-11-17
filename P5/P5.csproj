@@ -70,6 +70,11 @@
     </Compile>
     <Compile Include="FormIssueSelect.Designer.cs">
       <DependentUpon>FormIssueSelect.cs</DependentUpon>
+    <Compile Include="FormIssueRecorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueRecorder.Designer.cs">
+      <DependentUpon>FormIssueRecorder.cs</DependentUpon>
     </Compile>
     <Compile Include="FormIssueDashboard.cs">
       <SubType>Form</SubType>
@@ -129,6 +134,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormIssueSelect.resx">
       <DependentUpon>FormIssueSelect.cs</DependentUpon>
+    <EmbeddedResource Include="FormIssueRecorder.resx">
+      <DependentUpon>FormIssueRecorder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

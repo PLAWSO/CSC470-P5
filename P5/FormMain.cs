@@ -101,6 +101,12 @@ namespace P5
         {
             FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
             FormIssueSelect form = new FormIssueSelect(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)), "Modify");
+        }
+
+        private void issuesRecordToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormIssueRecorder form = new FormIssueRecorder();
+
             form.ShowDialog();
             form.Dispose();
         }
