@@ -170,6 +170,7 @@
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(527, 285);
             this.Description.TabIndex = 14;
+            this.Description.TextChanged += new System.EventHandler(this.Description_TextChanged);
             // 
             // cancel
             // 
