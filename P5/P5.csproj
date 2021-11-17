@@ -134,6 +134,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormIssueSelect.resx">
       <DependentUpon>FormIssueSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormIssueRecorder.resx">
       <DependentUpon>FormIssueRecorder.cs</DependentUpon>
     </EmbeddedResource>
