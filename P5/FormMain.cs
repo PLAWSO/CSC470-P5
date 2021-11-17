@@ -1,11 +1,14 @@
 ﻿using Builder;
 using System.Windows.Forms;
+using System;
 
 namespace P5
 {
     public partial class FormMain : Form
     {
         public AppUser _CurrentAppUser = new AppUser();
+        public Project _CurrentProject = new Project();
+        public string selectedProject = "";
 
         public FormMain()
         {
@@ -54,7 +57,6 @@ namespace P5
 
         private string selectAProject()
         {
-            string selectedProject = "";
             FormSelectProject form = new FormSelectProject();
             form.ShowDialog();
             if (form.DialogResult == DialogResult.OK)
@@ -91,6 +93,14 @@ namespace P5
         private void issuesDashboardToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             FormIssueDashboard form = new FormIssueDashboard();
+            form.ShowDialog();
+            form.Dispose();
+        }
+
+        private void issuesModifyToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            FormIssueSelect form = new FormIssueSelect(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)), "Modify");
             form.ShowDialog();
             form.Dispose();
         }
