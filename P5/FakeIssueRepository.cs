@@ -75,7 +75,8 @@ namespace Builder
 
         public string Add(Issue issue)
         {
-            return "ur mom";
+            issueList.Add(issue);
+            return "Success";
         }
 
         public List<Issue> GetAll(int ProjectId)

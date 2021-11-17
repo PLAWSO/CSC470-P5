@@ -65,6 +65,12 @@
     <Compile Include="FakeIssueStatusRepository.cs" />
     <Compile Include="FakePreferenceRepository.cs" />
     <Compile Include="FakeProjectRepository.cs" />
+    <Compile Include="FormIssueRecorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueRecorder.Designer.cs">
+      <DependentUpon>FormIssueRecorder.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIssueDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormIssueDashboard.resx">
       <DependentUpon>FormIssueDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIssueRecorder.resx">
+      <DependentUpon>FormIssueRecorder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

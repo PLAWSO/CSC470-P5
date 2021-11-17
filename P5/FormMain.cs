@@ -94,5 +94,17 @@ namespace P5
             form.ShowDialog();
             form.Dispose();
         }
+
+        private void preferencesToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void issuesRecordToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormIssueRecorder form = new FormIssueRecorder();
+            form.ShowDialog();
+            form.Dispose();
+        }
     }
 }

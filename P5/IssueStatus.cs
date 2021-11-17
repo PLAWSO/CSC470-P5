@@ -8,7 +8,7 @@ namespace Builder
 {
     public class IssueStatus
     {
-        int Id;
-        string Value;
+        public int Id;
+        public string Value;
     }
 }

@@ -44,5 +44,19 @@ namespace Builder
 
         }
 
+        private void lbxIssuesByDiscoverer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbxIssuesByMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalNumberOfIssues_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
