@@ -29,7 +29,6 @@ namespace Builder
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnSelectIssue = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dgdSelectIssue = new System.Windows.Forms.DataGridView();
@@ -40,11 +39,7 @@ namespace Builder
             this.InitialDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Component = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fakeIssueRepositoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fakeIssueStatusRepositoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgdSelectIssue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueRepositoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueStatusRepositoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSelectIssue
@@ -132,14 +127,6 @@ namespace Builder
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
-            // fakeIssueRepositoryBindingSource
-            // 
-            this.fakeIssueRepositoryBindingSource.DataSource = typeof(Builder.FakeIssueRepository);
-            // 
-            // fakeIssueStatusRepositoryBindingSource
-            // 
-            this.fakeIssueStatusRepositoryBindingSource.DataSource = typeof(Builder.FakeIssueStatusRepository);
-            // 
             // FormIssueSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,17 +141,13 @@ namespace Builder
             this.Text = "Select Issue";
             this.Load += new System.EventHandler(this.FormIssueSelect_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgdSelectIssue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueRepositoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueStatusRepositoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource fakeIssueStatusRepositoryBindingSource;
         private System.Windows.Forms.Button btnSelectIssue;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.BindingSource fakeIssueRepositoryBindingSource;
         private System.Windows.Forms.DataGridView dgdSelectIssue;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
