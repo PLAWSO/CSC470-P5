@@ -119,5 +119,17 @@ namespace P5
             form.ShowDialog();
             form.Dispose();
         }
+
+        private void requirementsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modifyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            FormSelectfeautre form = new FormSelectfeautre(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)));
+            form.ShowDialog();
+        }
     }
 }

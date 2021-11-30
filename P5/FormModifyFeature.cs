@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Builder
 {
-    public partial class FormCreateFeature : Form
+    public partial class FormModifyFeature : Form
     {
-        public FormCreateFeature()
+        public FormModifyFeature()
         {
             InitializeComponent();
         }
 
-        private void FormCreateFeature_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

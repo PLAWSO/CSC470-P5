@@ -116,9 +116,9 @@ namespace Builder
             }
             issueList[issue.Id] = issue;
             return "Success";
-=======
+
             return "ur mom";
->>>>>>> parent of 6ad40ad (Added Create Forms)
+
         }
 
         public int GetTotalNumberOfIssues(int ProjectId)
