@@ -16,30 +16,30 @@ namespace Builder
 
         private List<Feature> features;
 
-        string Add(Feature feature)
+        public string Add(Feature feature)
         {
             return "yes";
         }
-            
-        List<Feature> GetAll(int ProjectId)
-        {
 
+        public List<Feature> GetAll(int ProjectId)
+        {
+            return new List<Feature>();
         }
-        string Remove(Feature feature)
+        public string Remove(Feature feature)
         {
-
+            return "cool";
         }
-        string Modify(Feature feature)
+        public string Modify(Feature feature)
         {
-
+            return "cool";
         }
-        Feature GetFeatureById(int projectId, int featureId)
+        public Feature GetFeatureById(int projectId, int featureId)
         {
-
+            return new Feature();
         }
-        Feature GetFeatureByTitle(int projectId, string title)
+        public Feature GetFeatureByTitle(int projectId, string title)
         {
-
+            return new Feature();
         }
     }
 }
