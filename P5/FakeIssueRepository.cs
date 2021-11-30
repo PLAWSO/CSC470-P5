@@ -86,12 +86,15 @@ namespace Builder
 
         public bool Remove(Issue issue)
         {
+            issueList.Remove(issue);
             return true;
         }
 
         public string Modify(Issue issue)
         {
-            return "ur mom";
+            issueList.Remove(GetIssueById(issue.Id));
+            issueList.Add(issue);
+            return "Success";
         }
 
         public int GetTotalNumberOfIssues(int ProjectId)

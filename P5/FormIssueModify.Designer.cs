@@ -59,7 +59,7 @@
             // IdTextbox
             // 
             this.IdTextbox.Location = new System.Drawing.Point(119, 43);
-            this.IdTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IdTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.IdTextbox.Name = "IdTextbox";
             this.IdTextbox.ReadOnly = true;
             this.IdTextbox.Size = new System.Drawing.Size(76, 20);
@@ -80,7 +80,7 @@
             // TitleTextbox
             // 
             this.TitleTextbox.Location = new System.Drawing.Point(119, 66);
-            this.TitleTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TitleTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.TitleTextbox.Name = "TitleTextbox";
             this.TitleTextbox.Size = new System.Drawing.Size(319, 20);
             this.TitleTextbox.TabIndex = 4;
@@ -99,7 +99,7 @@
             // DiscoveryDate
             // 
             this.DiscoveryDate.Location = new System.Drawing.Point(119, 89);
-            this.DiscoveryDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DiscoveryDate.Margin = new System.Windows.Forms.Padding(2);
             this.DiscoveryDate.Name = "DiscoveryDate";
             this.DiscoveryDate.Size = new System.Drawing.Size(319, 20);
             this.DiscoveryDate.TabIndex = 6;
@@ -120,7 +120,7 @@
             // 
             this.Discover.FormattingEnabled = true;
             this.Discover.Location = new System.Drawing.Point(119, 111);
-            this.Discover.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Discover.Margin = new System.Windows.Forms.Padding(2);
             this.Discover.Name = "Discover";
             this.Discover.Size = new System.Drawing.Size(92, 21);
             this.Discover.TabIndex = 8;
@@ -139,7 +139,7 @@
             // ComponentTextbox
             // 
             this.ComponentTextbox.Location = new System.Drawing.Point(119, 136);
-            this.ComponentTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComponentTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.ComponentTextbox.Name = "ComponentTextbox";
             this.ComponentTextbox.Size = new System.Drawing.Size(319, 20);
             this.ComponentTextbox.TabIndex = 10;
@@ -159,7 +159,7 @@
             // 
             this.StatusList.FormattingEnabled = true;
             this.StatusList.Location = new System.Drawing.Point(119, 163);
-            this.StatusList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StatusList.Margin = new System.Windows.Forms.Padding(2);
             this.StatusList.Name = "StatusList";
             this.StatusList.Size = new System.Drawing.Size(92, 21);
             this.StatusList.TabIndex = 12;
@@ -179,7 +179,7 @@
             // Description
             // 
             this.Description.Location = new System.Drawing.Point(42, 206);
-            this.Description.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Description.Margin = new System.Windows.Forms.Padding(2);
             this.Description.Multiline = true;
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(396, 232);
@@ -188,7 +188,7 @@
             // cancel
             // 
             this.cancel.Location = new System.Drawing.Point(194, 472);
-            this.cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancel.Margin = new System.Windows.Forms.Padding(2);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(94, 31);
             this.cancel.TabIndex = 15;
@@ -199,13 +199,14 @@
             // btnModify
             // 
             this.btnModify.Location = new System.Drawing.Point(323, 472);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(2);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(94, 31);
             this.btnModify.TabIndex = 16;
-            this.btnModify.Text = "Create Issue";
+            this.btnModify.Text = "Modify Issue";
+            this.btnModify.UseMnemonic = false;
             this.btnModify.UseVisualStyleBackColor = true;
-            this.btnModify.Click += new System.EventHandler(this.Create_Click);
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // FormIssueModify
             // 
@@ -228,7 +229,7 @@
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.IdTextbox);
             this.Controls.Add(this.IdLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormIssueModify";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modify Issue";
