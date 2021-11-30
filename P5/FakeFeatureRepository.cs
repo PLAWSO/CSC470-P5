@@ -53,7 +53,6 @@ namespace Builder
 
         public string Add(Feature newFeature)
         {
-            bool match = false;
             int count = 1;
             if (newFeature == null)
             {
@@ -64,14 +63,9 @@ namespace Builder
             {
                 if (feature.Title == newFeature.Title)
                 {
-                    match = true;
+                    return DUPLICATE_TITLE_ERROR;
                 }
                 count++;
-            }
-
-            if (match == true)
-            {
-                return DUPLICATE_TITLE_ERROR;
             }
 
             newFeature.Id = count;

@@ -10,6 +10,7 @@ namespace P5
         public Project _CurrentProject = new Project();
         public string selectedProject = "";
         FakeFeatureRepository fakeFeatureRepository = new FakeFeatureRepository();
+        FakeRequirementRepository fakeRequirementRepository = new FakeRequirementRepository();
 
         public FormMain()
         {
@@ -123,10 +124,9 @@ namespace P5
 
         private void requirementCreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
-            //FormCreateRequirement form = new FormCreateRequirement(Int32.Parse(FakePreferenceRepository.PREFERENCE_PROJECT_ID));
-            //form.ShowDialog();
-            //form.Dispose();
+            FormCreateRequirement form = new FormCreateRequirement(_CurrentProject.Id, fakeRequirementRepository, fakeFeatureRepository);
+            form.ShowDialog();
+            form.Dispose();
         }
 
         private void requirmentModifyToolStripMenuItem_Click(object sender, EventArgs e)

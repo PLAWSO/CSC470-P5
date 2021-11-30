@@ -157,6 +157,9 @@
     <EmbeddedResource Include="FormCreateFeature.resx">
       <DependentUpon>FormCreateFeature.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateRequirement.resx">
+      <DependentUpon>FormCreateRequirement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormIssueDashboard.resx">
       <DependentUpon>FormIssueDashboard.cs</DependentUpon>
     </EmbeddedResource>
