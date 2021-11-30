@@ -79,6 +79,7 @@
             this.btnCreateRequirement.TabIndex = 4;
             this.btnCreateRequirement.Text = "Create Requirement";
             this.btnCreateRequirement.UseVisualStyleBackColor = true;
+            this.btnCreateRequirement.Click += new System.EventHandler(this.btnCreateRequirement_Click);
             // 
             // btnCancel
             // 
@@ -89,6 +90,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // FormCreateRequirement
             // 
