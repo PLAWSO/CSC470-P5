@@ -95,5 +95,10 @@ namespace Builder
             else
                 MessageBox.Show(result);
         }
+
+        private void Description_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

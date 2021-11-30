@@ -13,7 +13,15 @@ namespace Builder
         public string EMPTY_TITLE_ERROR = "Title must have a value";
         public string NOT_FOUND_ERROR = "Feature not found.";
         public string INVALID_PROJECT_ID = "Invalid Project Id for Feature.";
-
+        public List<Feature> feauture;
+        public FakeFeatureRepository()
+        {
+            feauture= new List<Feature>();
+            Feature feat = new Feature();
+            feat.Id = 1;
+            feat.ProjectId = 1;
+            feat.Title = "Check";
+            feauture.Add(feat);
         private List<Feature> featureList;
 
         public FakeFeatureRepository()
@@ -72,11 +80,20 @@ namespace Builder
             featureList.Add(newFeature);
             
             return NO_ERROR;
+
         }
 
         public List<Feature> GetAll(int ProjectId)
         {
-            return new List<Feature>();
+            List<Feature> returnfeat = new List<Feature>();
+            foreach(Feature f in feauture)
+            {
+                if (f.ProjectId == ProjectId)
+                {
+                    returnfeat.Add(f);
+                }
+            }
+            return returnfeat;
         }
         public string Remove(Feature feature)
         {
