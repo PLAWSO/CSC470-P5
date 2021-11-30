@@ -1,5 +1,4 @@
-﻿
-namespace Builder
+﻿namespace Builder
 {
     partial class FormCreateRequirement
     {
