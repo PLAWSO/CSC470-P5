@@ -119,5 +119,41 @@ namespace P5
             form.ShowDialog();
             form.Dispose();
         }
+
+        private void requirementCreateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            //FormCreateRequirement form = new FormCreateRequirement(Int32.Parse(FakePreferenceRepository.PREFERENCE_PROJECT_ID));
+            //form.ShowDialog();
+            //form.Dispose();
+        }
+
+        private void requirmentModifyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void requirementRemoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void featureCreateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            FormCreateFeature form = new FormCreateFeature();
+            form.ShowDialog();
+            form.Dispose();
+        }
+
+        private void featureModifyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void featureRemoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

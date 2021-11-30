@@ -58,6 +58,7 @@
             this.btnCreateFeature.TabIndex = 2;
             this.btnCreateFeature.Text = "Create Feature";
             this.btnCreateFeature.UseVisualStyleBackColor = true;
+            this.btnCreateFeature.Click += new System.EventHandler(this.btnCreateFeature_Click);
             // 
             // btnCancel
             // 
@@ -68,6 +69,7 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // FormCreateFeature
             // 
