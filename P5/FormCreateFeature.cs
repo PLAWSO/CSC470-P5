@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using P5;
 
 namespace Builder
 {
@@ -15,6 +16,31 @@ namespace Builder
         public FormCreateFeature()
         {
             InitializeComponent();
+        }
+
+        private void btnCreateFeature_Click(object sender, EventArgs e)
+        {
+            FakeFeatureRepository fakeFeatureRepository = new FakeFeatureRepository();
+            Feature feature = new Feature();
+            feature.Title = txbxTitle.Text;
+            string message;
+
+            message = fakeFeatureRepository.Add(feature);
+          
+            if(message != "")
+            {
+                MessageBox.Show(message);
+            }
+            else
+            {
+                this.Close();
+            }
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

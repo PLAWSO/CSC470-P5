@@ -16,9 +16,30 @@ namespace Builder
 
         private List<Feature> features;
 
-        public string Add(Feature feature)
+        public string Add(Feature newFeature)
         {
-            return "yes";
+            bool match = false;
+            if (newFeature == null)
+            {
+                return EMPTY_TITLE_ERROR;
+            }
+
+            foreach (Feature feature in features)
+            {
+                if (feature.Title == newFeature.Title)
+                {
+                    match = true;
+                }
+            }
+
+            if (match == true)
+            {
+                return DUPLICATE_TITLE_ERROR;
+            }
+
+            features.Add(newFeature);
+            
+            return NO_ERROR;
         }
 
         public List<Feature> GetAll(int ProjectId)
