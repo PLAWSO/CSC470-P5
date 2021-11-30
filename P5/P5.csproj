@@ -60,23 +60,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppUser.cs" />
+    <Compile Include="FakeRequirementRepository.cs" />
+    <Compile Include="FakeFeatureRepository.cs" />
     <Compile Include="FakeAppUserRepository.cs" />
     <Compile Include="FakeIssueRepository.cs" />
     <Compile Include="FakeIssueStatusRepository.cs" />
     <Compile Include="FakePreferenceRepository.cs" />
     <Compile Include="FakeProjectRepository.cs" />
-    <Compile Include="FormCreateFeature.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCreateFeature.Designer.cs">
-      <DependentUpon>FormCreateFeature.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCreateRequirement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCreateRequirement.Designer.cs">
-      <DependentUpon>FormCreateRequirement.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Feature.cs" />
     <Compile Include="FormIssueModify.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,8 +93,10 @@
       <DependentUpon>FormIssueDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="IAppUserRepository.cs" />
+    <Compile Include="IFeatureRepository.cs" />
     <Compile Include="IIssueRepository.cs" />
     <Compile Include="IIssueStatusRepository.cs" />
+    <Compile Include="IRequirementRepository.cs" />
     <Compile Include="IPreferenceRepository.cs" />
     <Compile Include="IProjectRepository.cs" />
     <Compile Include="FormLogin.cs">
@@ -148,12 +141,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCreateFeature.resx">
-      <DependentUpon>FormCreateFeature.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCreateRequirement.resx">
-      <DependentUpon>FormCreateRequirement.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Requirement.cs" />
     <EmbeddedResource Include="FormIssueDashboard.resx">
       <DependentUpon>FormIssueDashboard.cs</DependentUpon>
     </EmbeddedResource>

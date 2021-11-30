@@ -17,11 +17,15 @@ namespace Builder
         public FormIssueRecorder()
         {
             InitializeComponent();
+            FormSelectProject form = new FormSelectProject();
+            form.ShowDialog();
+
             FakeIssueRepository issueRepository = new FakeIssueRepository();
             FakePreferenceRepository fakePrefRepo = new FakePreferenceRepository();
             FakeIssueStatusRepository fakeIssueStatus = new FakeIssueStatusRepository();
             FakeAppUserRepository fakeUsers = new FakeAppUserRepository();
             FakeProjectRepository fakeProject = new FakeProjectRepository();
+            ComponentTextbox.Text = form._SelectedProjectName;
             AppUser appUser = new AppUser();
             List<AppUser> appUsers = fakeUsers.GetAll();
             foreach (AppUser Username in appUsers)
@@ -72,7 +76,15 @@ namespace Builder
             newIssue.Component = ComponentTextbox.Text.Trim();
             FakeIssueRepository issueRepository = new FakeIssueRepository();
             string result = issueRepository.Add(newIssue);
-            this.Close();
+            if (result == "Success")
+                this.Close();
+            else
+                MessageBox.Show(result);
+
+        }
+
+        private void Description_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -111,5 +111,13 @@ namespace P5
             form.ShowDialog();
             form.Dispose();
         }
+
+        private void issuesRemoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            FormIssueSelect form = new FormIssueSelect(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)), "Remove");
+            form.ShowDialog();
+            form.Dispose();
+        }
     }
 }
