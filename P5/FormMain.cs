@@ -122,7 +122,6 @@ namespace P5
             form.Dispose();
         }
 
-
         private void requirementCreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormCreateRequirement form = new FormCreateRequirement(_CurrentProject.Id, fakeRequirementRepository, fakeFeatureRepository);
@@ -130,15 +129,15 @@ namespace P5
             form.Dispose();
         }
 
-       
+        private void requirmentModifyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void requirementRemoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-
-
-       
 
         private void featureCreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
