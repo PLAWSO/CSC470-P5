@@ -9,6 +9,7 @@ namespace P5
         public AppUser _CurrentAppUser = new AppUser();
         public Project _CurrentProject = new Project();
         public string selectedProject = "";
+        FakeFeatureRepository fakeFeatureRepository = new FakeFeatureRepository();
 
         public FormMain()
         {
@@ -140,8 +141,7 @@ namespace P5
 
         private void featureCreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
-            FormCreateFeature form = new FormCreateFeature();
+            FormCreateFeature form = new FormCreateFeature(_CurrentProject.Id, fakeFeatureRepository);
             form.ShowDialog();
             form.Dispose();
         }
