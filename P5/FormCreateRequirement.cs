@@ -12,9 +12,41 @@ namespace Builder
 {
     public partial class FormCreateRequirement : Form
     {
-        public FormCreateRequirement()
+        int projectId;
+        FakeFeatureRepository fakeFeatureRepository = new FakeFeatureRepository();
+        FakeRequirementRepository fakeRequirementRepository = new FakeRequirementRepository();
+
+        public FormCreateRequirement(int projectID, FakeRequirementRepository fakeRequirementRepo, FakeFeatureRepository fakeFeatureRepo)
         {
             InitializeComponent();
+            projectId = projectID;
+            fakeRequirementRepository = fakeRequirementRepo;
+            fakeFeatureRepository = fakeFeatureRepo;
+            List<Feature> features;
+
+            features = fakeFeatureRepository.GetAll(projectID);
+            foreach (Feature feature in features)
+            {
+                cbxFeatureSelect.Items.Add(feature);
+            }
+        }
+
+        private void btnCreateRequirement_Click(object sender, EventArgs e)
+        {
+            Feature feature = new Feature();
+            Requirement requirement = new Requirement();
+            cbxFeatureSelect.SelectedItem.Equals(feature);
+
+            requirement.FeatureId = feature.Id;
+            requirement.ProjectId = feature.ProjectId;
+            requirement.Statement = tbxStatement.Text;
+
+            fakeRequirementRepository.Add(requirement);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

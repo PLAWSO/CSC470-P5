@@ -9,6 +9,8 @@ namespace P5
         public AppUser _CurrentAppUser = new AppUser();
         public Project _CurrentProject = new Project();
         public string selectedProject = "";
+        FakeFeatureRepository fakeFeatureRepository = new FakeFeatureRepository();
+        FakeRequirementRepository fakeRequirementRepository = new FakeRequirementRepository();
 
         public FormMain()
         {
@@ -120,16 +122,39 @@ namespace P5
             form.Dispose();
         }
 
-        private void requirementsToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void requirementCreateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCreateRequirement form = new FormCreateRequirement(_CurrentProject.Id, fakeRequirementRepository, fakeFeatureRepository);
+            form.ShowDialog();
+            form.Dispose();
+        }
+
+       
+
+        private void requirementRemoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void modifyToolStripMenuItem_Click(object sender, EventArgs e)
+
+       
+
+        private void featureCreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
-            FormSelectfeautre form = new FormSelectfeautre(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)));
+            FormCreateFeature form = new FormCreateFeature(_CurrentProject.Id, fakeFeatureRepository);
             form.ShowDialog();
+            form.Dispose();
+        }
+
+        private void featureModifyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void featureRemoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

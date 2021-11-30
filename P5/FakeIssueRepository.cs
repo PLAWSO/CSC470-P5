@@ -117,8 +117,6 @@ namespace Builder
             issueList[issue.Id] = issue;
             return "Success";
 
-            return "ur mom";
-
         }
 
         public int GetTotalNumberOfIssues(int ProjectId)

@@ -22,14 +22,65 @@ namespace Builder
             feat.ProjectId = 1;
             feat.Title = "Check";
             feauture.Add(feat);
+        private List<Feature> featureList;
 
-        }
-        
-        
-        public string Add(Feature feature)
+        public FakeFeatureRepository()
         {
+            if (featureList == null)
+            {
+                featureList = new List<Feature>();
+                Feature feature = new Feature();
+                feature.Id = 1;
+                feature.ProjectId = 1;
+                feature.Title = "New Feature Project 1";
+
+                featureList.Add(feature);
+
+                feature = new Feature();
+                feature.Id = 2;
+                feature.ProjectId = 1;
+                feature.Title = "Old Feature Project 1";
+
+                featureList.Add(feature);
+
+                feature = new Feature();
+                feature.Id = 3;
+                feature.ProjectId = 2;
+                feature.Title = "New Feature Project 2";
+
+                featureList.Add(feature);
+
+                feature = new Feature();
+                feature.Id = 4;
+                feature.ProjectId = 3;
+                feature.Title = "New Feature Project 3";
+
+                featureList.Add(feature);
+            }
+        }
+
+        public string Add(Feature newFeature)
+        {
+            int count = 1;
+            if (newFeature == null)
+            {
+                return EMPTY_TITLE_ERROR;
+            }
+
+            foreach (Feature feature in featureList)
+            {
+                if (feature.Title == newFeature.Title)
+                {
+                    return DUPLICATE_TITLE_ERROR;
+                }
+                count++;
+            }
+
+            newFeature.Id = count;
+            featureList.Add(newFeature);
             
-            return "yes";
+            return NO_ERROR;
+
         }
 
         public List<Feature> GetAll(int ProjectId)
