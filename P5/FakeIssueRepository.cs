@@ -99,16 +99,12 @@ namespace Builder
 
         public bool Remove(Issue issue)
         {
-<<<<<<< HEAD
             issueList.RemoveAt(issue.Id);
-=======
->>>>>>> parent of 6ad40ad (Added Create Forms)
             return true;
         }
 
         public string Modify(Issue issue)
         {
-<<<<<<< HEAD
             if (issue.Title == "")
             {
                 return (EMPTY_TITLE_ERROR);

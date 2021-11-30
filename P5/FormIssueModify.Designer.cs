@@ -57,13 +57,8 @@
             // 
             // IdTextbox
             // 
-<<<<<<< HEAD
             this.IdTextbox.Location = new System.Drawing.Point(159, 53);
             this.IdTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.IdTextbox.Location = new System.Drawing.Point(119, 43);
-            this.IdTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.IdTextbox.Name = "IdTextbox";
             this.IdTextbox.ReadOnly = true;
             this.IdTextbox.Size = new System.Drawing.Size(100, 22);
@@ -82,13 +77,8 @@
             // 
             // TitleTextbox
             // 
-<<<<<<< HEAD
             this.TitleTextbox.Location = new System.Drawing.Point(159, 81);
             this.TitleTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.TitleTextbox.Location = new System.Drawing.Point(119, 66);
-            this.TitleTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.TitleTextbox.Name = "TitleTextbox";
             this.TitleTextbox.Size = new System.Drawing.Size(424, 22);
             this.TitleTextbox.TabIndex = 4;
@@ -105,13 +95,8 @@
             // 
             // DiscoveryDate
             // 
-<<<<<<< HEAD
             this.DiscoveryDate.Location = new System.Drawing.Point(159, 110);
             this.DiscoveryDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.DiscoveryDate.Location = new System.Drawing.Point(119, 89);
-            this.DiscoveryDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.DiscoveryDate.Name = "DiscoveryDate";
             this.DiscoveryDate.Size = new System.Drawing.Size(424, 22);
             this.DiscoveryDate.TabIndex = 6;
@@ -130,13 +115,8 @@
             // Discover
             // 
             this.Discover.FormattingEnabled = true;
-<<<<<<< HEAD
             this.Discover.Location = new System.Drawing.Point(159, 137);
             this.Discover.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.Discover.Location = new System.Drawing.Point(119, 111);
-            this.Discover.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.Discover.Name = "Discover";
             this.Discover.Size = new System.Drawing.Size(121, 24);
             this.Discover.TabIndex = 8;
@@ -153,13 +133,8 @@
             // 
             // ComponentTextbox
             // 
-<<<<<<< HEAD
             this.ComponentTextbox.Location = new System.Drawing.Point(159, 167);
             this.ComponentTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.ComponentTextbox.Location = new System.Drawing.Point(119, 136);
-            this.ComponentTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.ComponentTextbox.Name = "ComponentTextbox";
             this.ComponentTextbox.Size = new System.Drawing.Size(424, 22);
             this.ComponentTextbox.TabIndex = 10;
@@ -177,13 +152,8 @@
             // StatusList
             // 
             this.StatusList.FormattingEnabled = true;
-<<<<<<< HEAD
             this.StatusList.Location = new System.Drawing.Point(159, 201);
             this.StatusList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.StatusList.Location = new System.Drawing.Point(119, 163);
-            this.StatusList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.StatusList.Name = "StatusList";
             this.StatusList.Size = new System.Drawing.Size(121, 24);
             this.StatusList.TabIndex = 12;
@@ -201,13 +171,8 @@
             // 
             // Description
             // 
-<<<<<<< HEAD
             this.Description.Location = new System.Drawing.Point(56, 254);
             this.Description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.Description.Location = new System.Drawing.Point(42, 206);
-            this.Description.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.Description.Multiline = true;
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(527, 285);
@@ -215,13 +180,8 @@
             // 
             // cancel
             // 
-<<<<<<< HEAD
             this.cancel.Location = new System.Drawing.Point(259, 581);
             this.cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.cancel.Location = new System.Drawing.Point(194, 472);
-            this.cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(125, 38);
             this.cancel.TabIndex = 15;
@@ -231,25 +191,14 @@
             // 
             // btnModify
             // 
-<<<<<<< HEAD
             this.btnModify.Location = new System.Drawing.Point(431, 581);
             this.btnModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.btnModify.Location = new System.Drawing.Point(323, 472);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(125, 38);
             this.btnModify.TabIndex = 16;
-<<<<<<< HEAD
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = true;
             this.btnModify.Click += new System.EventHandler(this.btnModify_Click_1);
-=======
-            this.btnModify.Text = "Create Issue";
-            this.btnModify.UseVisualStyleBackColor = true;
-            this.btnModify.Click += new System.EventHandler(this.Create_Click);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             // 
             // FormIssueModify
             // 
@@ -272,11 +221,7 @@
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.IdTextbox);
             this.Controls.Add(this.IdLabel);
-<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> parent of 6ad40ad (Added Create Forms)
             this.Name = "FormIssueModify";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modify Issue";
