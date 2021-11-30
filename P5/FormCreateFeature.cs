@@ -13,18 +13,22 @@ namespace Builder
 {
     public partial class FormCreateFeature : Form
     {
-        public FormCreateFeature()
+        private int projectId;
+        FakeFeatureRepository fakeFeatureRepository = new FakeFeatureRepository();
+        public FormCreateFeature(int projectID, FakeFeatureRepository fakeFeatureRepo)
         {
             InitializeComponent();
+            projectId = projectID;
+            fakeFeatureRepository = fakeFeatureRepo;
         }
 
         private void btnCreateFeature_Click(object sender, EventArgs e)
         {
-            FakeFeatureRepository fakeFeatureRepository = new FakeFeatureRepository();
+
             Feature feature = new Feature();
             feature.Title = txbxTitle.Text;
+            feature.ProjectId = projectId;
             string message;
-
             message = fakeFeatureRepository.Add(feature);
           
             if(message != "")
