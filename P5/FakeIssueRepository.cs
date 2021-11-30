@@ -8,8 +8,8 @@ namespace Builder
 {
     public class FakeIssueRepository : IIssueRepository
     {
-        string NO_ERROR = "";
         string EMPTY_TITLE_ERROR = "A Title is required.";
+        string unique_tittle = "A title must be unique";
         string EMPTY_DISCOVERY_DATETIME_ERROR = "Must select a Discovery date/time.";
         string FUTURE_DISCOVERY_DATETIME_ERROR = "Issues can't be from the future.";
         string EMPTY_DISCOVERER_ERROR = "A Discoverer is required.";
@@ -75,6 +75,19 @@ namespace Builder
 
         public string Add(Issue issue)
         {
+
+            foreach (Issue item in issueList)
+                if (String.Equals(item.Title, issue.Title))
+                    return unique_tittle;
+            if (issue.Title == "")
+            {
+                return (EMPTY_TITLE_ERROR);
+            }
+            
+                if (issue.DiscoveryDate > DateTime.Now)
+            {
+                return (FUTURE_DISCOVERY_DATETIME_ERROR);
+            }
             issueList.Add(issue);
             return "Success";
         }
@@ -86,15 +99,30 @@ namespace Builder
 
         public bool Remove(Issue issue)
         {
-            issueList.Remove(issue);
+<<<<<<< HEAD
+            issueList.RemoveAt(issue.Id);
+=======
+>>>>>>> parent of 6ad40ad (Added Create Forms)
             return true;
         }
 
         public string Modify(Issue issue)
         {
-            issueList.Remove(GetIssueById(issue.Id));
-            issueList.Add(issue);
+<<<<<<< HEAD
+            if (issue.Title == "")
+            {
+                return (EMPTY_TITLE_ERROR);
+            }
+
+            if (issue.DiscoveryDate > DateTime.Now)
+            {
+                return (FUTURE_DISCOVERY_DATETIME_ERROR);
+            }
+            issueList[issue.Id] = issue;
             return "Success";
+=======
+            return "ur mom";
+>>>>>>> parent of 6ad40ad (Added Create Forms)
         }
 
         public int GetTotalNumberOfIssues(int ProjectId)

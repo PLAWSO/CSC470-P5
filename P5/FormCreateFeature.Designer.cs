@@ -53,7 +53,7 @@ namespace Builder
             // 
             // btnCreateFeature
             // 
-            this.btnCreateFeature.Location = new System.Drawing.Point(345, 123);
+            this.btnCreateFeature.Location = new System.Drawing.Point(345, 77);
             this.btnCreateFeature.Name = "btnCreateFeature";
             this.btnCreateFeature.Size = new System.Drawing.Size(114, 23);
             this.btnCreateFeature.TabIndex = 2;
@@ -63,24 +63,24 @@ namespace Builder
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(200, 123);
+            this.btnCancel.Location = new System.Drawing.Point(202, 77);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(114, 23);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FormCreateFeature
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(497, 158);
+            this.ClientSize = new System.Drawing.Size(497, 125);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCreateFeature);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txbxTitle);
-            this.Name = "Form1";
+            this.Name = "FormCreateFeature";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Feature";
             this.Load += new System.EventHandler(this.Form1_Load);
