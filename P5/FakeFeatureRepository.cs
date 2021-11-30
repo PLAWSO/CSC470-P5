@@ -18,8 +18,6 @@ namespace Builder
 
         public FakeFeatureRepository()
         {
-            if (featureList == null)
-            {
                 featureList = new List<Feature>();
                 Feature feature = new Feature();
                 feature.Id = 1;
@@ -48,7 +46,7 @@ namespace Builder
                 feature.Title = "New Feature Project 3";
 
                 featureList.Add(feature);
-            }
+            
         }
 
         public string Add(Feature newFeature)
@@ -76,7 +74,13 @@ namespace Builder
 
         public List<Feature> GetAll(int ProjectId)
         {
-            return new List<Feature>();
+            List<Feature> returnfeat = new List<Feature>();
+            foreach (Feature f in featureList)
+            { 
+                if(f.ProjectId == ProjectId)
+                    returnfeat.Add(f);
+            }
+            return returnfeat;
         }
         public string Remove(Feature feature)
         {

@@ -148,7 +148,10 @@ namespace P5
 
         private void featureModifyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            FormSelectFeauture form = new FormSelectFeauture(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)), "Modify");
+            form.ShowDialog();
+            form.Dispose();
         }
 
         private void featureRemoveToolStripMenuItem_Click(object sender, EventArgs e)
