@@ -17,68 +17,33 @@ namespace Builder
 
         List<Requirement> requirements;
 
-        string Add(Requirement requirement)
+        public string Add(Requirement requirement)
         {
-
+            return "cool";
         }
-        List<Requirement> GetAll(Requirement requirement)
+        public List<Requirement> GetAll(Requirement requirement)
         {
-
+            return new List<Requirement>();
         }
-        string Remove(Requirement requirement)
+        public string Remove(Requirement requirement)
         {
-
+            return "cool";
         }
-        string Modify(Requirement requirement)
+        public string Modify(Requirement requirement)
         {
-
+            return "cool";
         }
-        Requirement GetRequirementById(int requirementId)
+        public Requirement GetRequirementById(int requirementId)
         {
-
+            return new Requirement();
         }
-        int CountByFeatureId(int featureId)
+        public int CountByFeatureId(int featureId)
         {
-
+            return 0;
         }
-        void RemoveByFeatureId(int featureId)
+        public void RemoveByFeatureId(int featureId)
         {
 
-        }
-
-        string IRequirementRepository.Add(Requirement requirement)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Requirement> IRequirementRepository.GetAll(Requirement requirement)
-        {
-            throw new NotImplementedException();
-        }
-
-        string IRequirementRepository.Remove(Requirement requirement)
-        {
-            throw new NotImplementedException();
-        }
-
-        string IRequirementRepository.Modify(Requirement requirement)
-        {
-            throw new NotImplementedException();
-        }
-
-        Requirement IRequirementRepository.GetRequirementById(int requirementId)
-        {
-            throw new NotImplementedException();
-        }
-
-        int IRequirementRepository.CountByFeatureId(int featureId)
-        {
-            throw new NotImplementedException();
-        }
-
-        void IRequirementRepository.RemoveByFeatureId(int featureId)
-        {
-            throw new NotImplementedException();
         }
     }
 }
