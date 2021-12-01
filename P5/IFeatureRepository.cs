@@ -13,6 +13,6 @@ namespace Builder
         string Remove(Feature feature);
         string Modify(Feature feature);
         Feature GetFeatureById(int projectId, int featureId);
-        Feature GetFeatureByTitle(int projectId, string title);
+        Feature GetFeatureByTitle(string title);
     }
 }

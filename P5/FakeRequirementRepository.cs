@@ -28,30 +28,36 @@ namespace Builder
                 requirement.FeatureId = 1;
                 requirement.ProjectId = 1;
                 requirement.Statement = "Requirement 1 Feature 1 Project 1";
+                requirementList.Add(requirement);
 
                 requirement = new Requirement();
                 requirement.Id = 2;
                 requirement.FeatureId = 1;
                 requirement.ProjectId = 1;
                 requirement.Statement = "Requirement 2 Feature 1 Project 1";
+                requirementList.Add(requirement);
 
                 requirement = new Requirement();
                 requirement.Id = 3;
                 requirement.FeatureId = 2;
                 requirement.ProjectId = 1;
                 requirement.Statement = "Requirement 3 Feature 2 Project 1";
+                requirementList.Add(requirement);
 
                 requirement = new Requirement();
                 requirement.Id = 4;
                 requirement.FeatureId = 1;
                 requirement.ProjectId = 2;
                 requirement.Statement = "Requirement 4 Feature 1 Project 2";
+                requirementList.Add(requirement);
 
                 requirement = new Requirement();
                 requirement.Id = 5;
                 requirement.FeatureId = 1;
                 requirement.ProjectId = 3;
                 requirement.Statement = "Requirement 5 Feature 1 Project 3";
+                requirementList.Add(requirement);
+
             }
         }
 
@@ -78,13 +84,14 @@ namespace Builder
 
             return NO_ERROR;
         }
-        public List<Requirement> GetAll(Requirement requirement)
+        public List<Requirement> GetAll()
         {
-            return new List<Requirement>();
+            return requirementList;
         }
         public string Remove(Requirement requirement)
         {
-            return "cool";
+            this.requirementList.Remove(requirement);
+            return "success";
         }
         public string Modify(Requirement requirement)
         {
@@ -92,11 +99,18 @@ namespace Builder
         }
         public Requirement GetRequirementById(int requirementId)
         {
-            return new Requirement();
+            foreach (Requirement r in requirementList)
+                if (r.Id == requirementId)
+                    return r;
+            return null;
         }
         public int CountByFeatureId(int featureId)
         {
-            return 0;
+            int count = 0;
+            foreach (Requirement requirement in requirementList)
+                if (requirement.FeatureId == featureId)
+                    count++;
+            return count;
         }
         public void RemoveByFeatureId(int featureId)
         {

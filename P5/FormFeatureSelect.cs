@@ -15,10 +15,10 @@ namespace Builder
         FakeFeatureRepository FeatureRepo = new FakeFeatureRepository();
         public DataGridViewRow dataGridViewRow;
         public int projectID;
-        public int selectedFeature;
+        public int featureID;
 
         public string Choice;
-        public FormSelectFeauture(int projecID,string choice)
+        public FormSelectFeauture(int projecID, string choice)
         {
             projectID = projecID;
             Choice = choice;
@@ -34,7 +34,6 @@ namespace Builder
             {
                 dgFeature.Rows.Add(f.Id, f.Title);
             }
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -49,14 +48,35 @@ namespace Builder
 
         private void Select_Click(object sender, EventArgs e)
         {
-            selectedFeature = dgFeature.Rows.GetFirstRow(DataGridViewElementStates.Selected);
-            if(Choice == "Modify")
+            featureID = Int32.Parse(dgFeature.SelectedRows[0].Cells[0].Value.ToString());
+
+            if (Choice == "Modify")
             {
-                dataGridViewRow = dgFeature.Rows[selectedFeature];
+                dataGridViewRow = dgFeature.Rows[featureID];
                 FormModifyFeature form = new FormModifyFeature(dataGridViewRow,projectID);
                 form.ShowDialog();
                 form.Dispose();
                 this.Close();
+            }
+            else if (Choice == "Remove")
+            {
+                FakeRequirementRepository requirementRepo = new FakeRequirementRepository();
+                Feature selectedFeature = FeatureRepo.GetFeatureById(projectID, featureID);
+
+                DialogResult dialogResult;
+                if (requirementRepo.CountByFeatureId(featureID) > 0)
+                    dialogResult = MessageBox.Show("There are one or more requirements associated with this feature. These requirments will be destroyed if you remove this feature. Are you sure you want to remove: " + selectedFeature.Title + "?", "Confirmation", MessageBoxButtons.YesNo);
+                else
+                    dialogResult = MessageBox.Show("Are you sure you want to remove: " + selectedFeature.Title + "?", "Confirmation", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    FeatureRepo.Remove(selectedFeature);
+                    dgFeature.Rows.Clear();
+                    List<Feature> features = FeatureRepo.GetAll(projectID);
+                    foreach (Feature f in features)
+                        dgFeature.Rows.Add(f.Id, f.Title);
+                }
             }
         }
     }
