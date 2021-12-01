@@ -151,7 +151,7 @@ namespace P5
         private void featureModifyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
-            FormSelectFeauture form = new FormSelectFeauture(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)), "Modify");
+            FormSelectFeauture form = new FormSelectFeauture(_CurrentProject.Id, "Modify", fakeFeatureRepository);
             form.ShowDialog();
             form.Dispose();
         }

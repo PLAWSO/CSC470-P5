@@ -15,9 +15,11 @@ namespace Builder
         public string textfill;
         public int id;
         public int prjectId;
-        public FormModifyFeature(DataGridViewRow dataGridViewRow, int projectId)
+        FakeFeatureRepository featurerepo = new FakeFeatureRepository();
+        public FormModifyFeature(DataGridViewRow dataGridViewRow, int projectId, FakeFeatureRepository fakeFeatureRepo)
         {
-            projectId = prjectId;
+            prjectId = projectId;
+            featurerepo = fakeFeatureRepo;
             textfill = dataGridViewRow.Cells[1].Value.ToString();
             id = Convert.ToInt32(dataGridViewRow.Cells[0].Value);
             InitializeComponent();
@@ -35,7 +37,6 @@ namespace Builder
 
         private void Modify_Click(object sender, EventArgs e)
         {
-            FakeFeatureRepository featurerepo = new FakeFeatureRepository();
             Feature feat = new Feature();
             if (TextTitle.Text == "")
                 MessageBox.Show("A title cannot be empty", "Attention", MessageBoxButtons.OKCancel);

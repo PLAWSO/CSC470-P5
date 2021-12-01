@@ -18,11 +18,13 @@ namespace Builder
         public int selectedFeature;
 
         public string Choice;
-        public FormSelectFeauture(int projecID,string choice)
+        public FormSelectFeauture(int projecID, string choice, FakeFeatureRepository fakeFeatureRepository)
         {
             projectID = projecID;
             Choice = choice;
+            FeatureRepo = fakeFeatureRepository;
             InitializeComponent();
+
         }
 
         private void FormSelectFeauture_Load(object sender, EventArgs e)
@@ -34,7 +36,6 @@ namespace Builder
             {
                 dgFeature.Rows.Add(f.Id, f.Title);
             }
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -50,13 +51,25 @@ namespace Builder
         private void Select_Click(object sender, EventArgs e)
         {
             selectedFeature = dgFeature.Rows.GetFirstRow(DataGridViewElementStates.Selected);
-            if(Choice == "Modify")
+            if (selectedFeature < 0)
             {
-                dataGridViewRow = dgFeature.Rows[selectedFeature];
-                FormModifyFeature form = new FormModifyFeature(dataGridViewRow,projectID);
-                form.ShowDialog();
-                form.Dispose();
-                this.Close();
+                DialogResult result = MessageBox.Show("An issue must be selected.", "Attention", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.Cancel)
+                {
+                    Close();
+                    return;
+                }
+            }
+            else
+            {
+                if (Choice == "Modify")
+                {
+                    dataGridViewRow = dgFeature.Rows[selectedFeature];
+                    FormModifyFeature form = new FormModifyFeature(dataGridViewRow, projectID, FeatureRepo);
+                    form.ShowDialog();
+                    form.Dispose();
+                    this.Close();
+                }
             }
         }
     }
