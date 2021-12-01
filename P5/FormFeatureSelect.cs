@@ -58,7 +58,7 @@ namespace Builder
             if (Choice == "Modify")
             {
                 dataGridViewRow = dgFeature.Rows[featureID];
-                FormModifyFeature form = new FormModifyFeature(dataGridViewRow,projectID);
+                FormModifyFeature form = new FormModifyFeature(dataGridViewRow, projectID, FeatureRepo);
                 form.ShowDialog();
                 form.Dispose();
                 this.Close();

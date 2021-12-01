@@ -76,7 +76,7 @@ namespace Builder
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(206, 323)
+            this.Cancel.Location = new System.Drawing.Point(206, 323);
             this.Cancel.Margin = new System.Windows.Forms.Padding(2);
 
             this.Cancel.Name = "Cancel";
