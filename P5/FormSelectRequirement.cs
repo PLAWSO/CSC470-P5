@@ -16,6 +16,7 @@ namespace Builder
         FakeRequirementRepository requirementRepo = new FakeRequirementRepository();
         FakeFeatureRepository featureRepo = new FakeFeatureRepository();
         string action;
+        int projectId;
 
         public FormSelectRequirement(int projectId, string action)
         {
@@ -23,6 +24,7 @@ namespace Builder
         
             dgvRequirements.Enabled = false;
             this.action = action;
+            this.projectId = projectId;
 
             List<Feature> featureList = featureRepo.GetAll(projectId);
             foreach (Feature f in featureList)
@@ -77,10 +79,16 @@ namespace Builder
                 }
                 else if (this.action == "Modify")
                 {
-                    // Add stuff for modify
+                    FormModifyRequirement modify = new FormModifyRequirement(req, this.projectId);
+
 
                 }
             }
+        }
+
+        private void FormSelectRequirement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -127,6 +127,7 @@ namespace Builder
             this.Controls.Add(this.lblFeature);
             this.Name = "FormSelectRequirement";
             this.Text = "Select Requirement";
+            this.Load += new System.EventHandler(this.FormSelectRequirement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequirements)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
