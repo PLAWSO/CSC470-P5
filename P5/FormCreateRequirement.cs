@@ -33,23 +33,26 @@ namespace Builder
 
         private void btnCreateRequirement_Click(object sender, EventArgs e)
         {
-            Requirement requirement = new Requirement();
-            FakeFeatureRepository featureRepo = new FakeFeatureRepository();
-            Feature feature = featureRepo.GetFeatureByTitle(cbxFeatureSelect.SelectedItem.ToString());
-
-            requirement.FeatureId = feature.Id;
-            requirement.ProjectId = feature.ProjectId;
-            requirement.Statement = tbxStatement.Text;
-
-            string message = fakeRequirementRepository.Add(requirement);
-
-            if (message != "")
+            if (cbxFeatureSelect.SelectedItem != null)
             {
-                MessageBox.Show(message);
-            }
-            else
-            {
-                this.Close();
+                Requirement requirement = new Requirement();
+                FakeFeatureRepository featureRepo = new FakeFeatureRepository();
+                Feature feature = featureRepo.GetFeatureByTitle(cbxFeatureSelect.SelectedItem.ToString());
+
+                requirement.FeatureId = feature.Id;
+                requirement.ProjectId = feature.ProjectId;
+                requirement.Statement = tbxStatement.Text;
+
+                string message = fakeRequirementRepository.Add(requirement);
+
+                if (message != "")
+                {
+                    MessageBox.Show(message);
+                }
+                else
+                {
+                    this.Close();
+                }
             }
         }
 

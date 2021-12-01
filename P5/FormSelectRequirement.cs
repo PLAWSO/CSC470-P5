@@ -1,12 +1,5 @@
-﻿using P5;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Builder
@@ -21,7 +14,7 @@ namespace Builder
         public FormSelectRequirement(int projectId, string action)
         {
             InitializeComponent();
-        
+
             dgvRequirements.Enabled = false;
             this.action = action;
             this.projectId = projectId;
@@ -80,7 +73,7 @@ namespace Builder
                 else if (this.action == "Modify")
                 {
                     FormModifyRequirement modify = new FormModifyRequirement(req, this.projectId);
-
+                    modify.ShowDialog(); 
 
                 }
             }

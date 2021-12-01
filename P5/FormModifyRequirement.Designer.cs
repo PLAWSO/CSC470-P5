@@ -30,7 +30,7 @@ namespace Builder
         private void InitializeComponent()
         {
             this.lblFeature = new System.Windows.Forms.Label();
-            this.cbxFeatureSelect = new System.Windows.Forms.ComboBox();
+            this.cbxFeature = new System.Windows.Forms.ComboBox();
             this.lblStatement = new System.Windows.Forms.Label();
             this.tbxStatement = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -46,14 +46,14 @@ namespace Builder
             this.lblFeature.TabIndex = 3;
             this.lblFeature.Text = "Feature:";
             // 
-            // cbxFeatureSelect
+            // cbxFeature
             // 
-            this.cbxFeatureSelect.FormattingEnabled = true;
-            this.cbxFeatureSelect.Location = new System.Drawing.Point(91, 36);
-            this.cbxFeatureSelect.Name = "cbxFeatureSelect";
-            this.cbxFeatureSelect.Size = new System.Drawing.Size(503, 21);
-            this.cbxFeatureSelect.TabIndex = 4;
-            this.cbxFeatureSelect.Text = "<Make Selection>";
+            this.cbxFeature.FormattingEnabled = true;
+            this.cbxFeature.Location = new System.Drawing.Point(91, 36);
+            this.cbxFeature.Name = "cbxFeature";
+            this.cbxFeature.Size = new System.Drawing.Size(503, 21);
+            this.cbxFeature.TabIndex = 4;
+            this.cbxFeature.Text = "<Make Selection>";
             // 
             // lblStatement
             // 
@@ -69,10 +69,8 @@ namespace Builder
             this.tbxStatement.Location = new System.Drawing.Point(91, 79);
             this.tbxStatement.Multiline = true;
             this.tbxStatement.Name = "tbxStatement";
-
             this.tbxStatement.Size = new System.Drawing.Size(503, 261);
             this.tbxStatement.TabIndex = 6;
-
             this.tbxStatement.TextChanged += new System.EventHandler(this.tbxStatement_TextChanged);
             // 
             // btnCancel
@@ -104,12 +102,12 @@ namespace Builder
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tbxStatement);
             this.Controls.Add(this.lblStatement);
-            this.Controls.Add(this.cbxFeatureSelect);
+            this.Controls.Add(this.cbxFeature);
             this.Controls.Add(this.lblFeature);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormModifyRequirement";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "SelectRequirement";
+            this.Text = "Modify Requirement";
             this.Load += new System.EventHandler(this.FormModifyRequirement_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,7 +117,7 @@ namespace Builder
         #endregion
 
         private System.Windows.Forms.Label lblFeature;
-        private System.Windows.Forms.ComboBox cbxFeatureSelect;
+        private System.Windows.Forms.ComboBox cbxFeature;
         private System.Windows.Forms.Label lblStatement;
         private System.Windows.Forms.TextBox tbxStatement;
         private System.Windows.Forms.Button btnCancel;
