@@ -126,19 +126,23 @@ namespace P5
 
         private void requirementCreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormCreateRequirement form = new FormCreateRequirement(_CurrentProject.Id, fakeRequirementRepository, fakeFeatureRepository);
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            FormCreateRequirement form = new FormCreateRequirement(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)), fakeRequirementRepository, fakeFeatureRepository);
             form.ShowDialog();
             form.Dispose();
         }
 
         private void requirmentModifyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void requirementRemoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            FormSelectRequirement form = new FormSelectRequirement(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)), "Remove");
+            form.ShowDialog();
+            form.Dispose();
         }
 
         private void featureCreateToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,7 +162,10 @@ namespace P5
 
         private void featureRemoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            FormSelectFeauture form = new FormSelectFeauture(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)), "Remove");
+            form.ShowDialog();
+            form.Dispose();
         }
     }
 }

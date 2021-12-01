@@ -84,7 +84,8 @@ namespace Builder
         }
         public string Remove(Feature feature)
         {
-            return "cool";
+            featureList.Remove(feature);
+            return "success";
         }
         public string Modify(Feature feature)
         {
@@ -98,11 +99,17 @@ namespace Builder
         }
         public Feature GetFeatureById(int projectId, int featureId)
         {
-            return new Feature();
+            foreach (Feature f in featureList)
+                if (f.Id == featureId)
+                    return f;
+            return null;
         }
-        public Feature GetFeatureByTitle(int projectId, string title)
+        public Feature GetFeatureByTitle(string title)
         {
-            return new Feature();
+            foreach (Feature f in featureList)
+                if (f.Title == title)
+                    return f;
+            return null;
         }
     }
 }

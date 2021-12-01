@@ -9,7 +9,7 @@ namespace Builder
     public interface IRequirementRepository
     {
         string Add(Requirement requirement);
-        List<Requirement> GetAll(Requirement requirement);
+        List<Requirement> GetAll();
         string Remove(Requirement requirement);
         string Modify(Requirement requirement);
         Requirement GetRequirementById(int requirementId);

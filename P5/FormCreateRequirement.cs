@@ -19,7 +19,7 @@ namespace Builder
         public FormCreateRequirement(int projectID, FakeRequirementRepository fakeRequirementRepo, FakeFeatureRepository fakeFeatureRepo)
         {
             InitializeComponent();
-            projectId = projectID;
+            this.projectId = projectID;
             fakeRequirementRepository = fakeRequirementRepo;
             fakeFeatureRepository = fakeFeatureRepo;
             List<Feature> features;
@@ -33,9 +33,9 @@ namespace Builder
 
         private void btnCreateRequirement_Click(object sender, EventArgs e)
         {
-            Feature feature = new Feature();
             Requirement requirement = new Requirement();
-            cbxFeatureSelect.SelectedItem.Equals(feature);
+            FakeFeatureRepository featureRepo = new FakeFeatureRepository();
+            Feature feature = featureRepo.GetFeatureByTitle(cbxFeatureSelect.SelectedItem.ToString());
 
             requirement.FeatureId = feature.Id;
             requirement.ProjectId = feature.ProjectId;
