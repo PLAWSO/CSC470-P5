@@ -18,11 +18,15 @@ namespace Builder
         public int featureID;
 
         public string Choice;
-        public FormSelectFeauture(int projecID, string choice)
+
+        public FormSelectFeauture(int projecID, string choice, FakeFeatureRepository fakeFeatureRepository)
+
         {
             projectID = projecID;
             Choice = choice;
+            FeatureRepo = fakeFeatureRepository;
             InitializeComponent();
+
         }
 
         private void FormSelectFeauture_Load(object sender, EventArgs e)
@@ -48,6 +52,7 @@ namespace Builder
 
         private void Select_Click(object sender, EventArgs e)
         {
+
             featureID = Int32.Parse(dgFeature.SelectedRows[0].Cells[0].Value.ToString());
 
             if (Choice == "Modify")
@@ -57,6 +62,7 @@ namespace Builder
                 form.ShowDialog();
                 form.Dispose();
                 this.Close();
+
             }
             else if (Choice == "Remove")
             {
