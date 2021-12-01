@@ -134,7 +134,10 @@ namespace P5
 
         private void requirmentModifyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FakePreferenceRepository preferenceRepository = new FakePreferenceRepository();
+            FormCreateRequirement form = new FormCreateRequirement(Int32.Parse(preferenceRepository.GetPreference(_CurrentAppUser.UserName, FakePreferenceRepository.PREFERENCE_PROJECT_ID)), fakeRequirementRepository, fakeFeatureRepository);
+            form.ShowDialog();
+            form.Dispose();
         }
 
         private void requirementRemoveToolStripMenuItem_Click(object sender, EventArgs e)

@@ -57,5 +57,10 @@ namespace Builder
         {
             this.Close();
         }
+
+        private void tbxStatement_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
