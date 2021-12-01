@@ -39,6 +39,7 @@ namespace Builder
             // 
             // dgFeature
             // 
+            this.dgFeature.AllowUserToAddRows = false;
             this.dgFeature.AllowUserToOrderColumns = true;
             this.dgFeature.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgFeature.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

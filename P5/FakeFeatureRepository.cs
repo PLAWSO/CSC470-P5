@@ -88,7 +88,13 @@ namespace Builder
         }
         public string Modify(Feature feature)
         {
-            return "cool";
+            foreach(Feature f in featureList)
+            {
+                if (f.Title == feature.Title)
+                    return "Cannot have the same title";
+            }
+            featureList [feature.Id - 1 ] = feature;
+            return "check";
         }
         public Feature GetFeatureById(int projectId, int featureId)
         {

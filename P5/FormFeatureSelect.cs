@@ -13,8 +13,10 @@ namespace Builder
     public partial class FormSelectFeauture : Form
     {
         FakeFeatureRepository FeatureRepo = new FakeFeatureRepository();
+        public DataGridViewRow dataGridViewRow;
         public int projectID;
         public int selectedFeature;
+
         public string Choice;
         public FormSelectFeauture(int projecID,string choice)
         {
@@ -48,6 +50,14 @@ namespace Builder
         private void Select_Click(object sender, EventArgs e)
         {
             selectedFeature = dgFeature.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+            if(Choice == "Modify")
+            {
+                dataGridViewRow = dgFeature.Rows[selectedFeature];
+                FormModifyFeature form = new FormModifyFeature(dataGridViewRow,projectID);
+                form.ShowDialog();
+                form.Dispose();
+                this.Close();
+            }
         }
     }
 }
