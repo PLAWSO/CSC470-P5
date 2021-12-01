@@ -34,6 +34,7 @@ namespace Builder
             this.Close();
         }
 
+
         private void FormModifyRequirement_Load(object sender, EventArgs e)
         {
 
@@ -43,6 +44,7 @@ namespace Builder
         {
 
         }
+
 
         private void tbxStatement_TextChanged(object sender, EventArgs e)
         {

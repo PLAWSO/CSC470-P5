@@ -69,8 +69,10 @@ namespace Builder
             this.tbxStatement.Location = new System.Drawing.Point(91, 79);
             this.tbxStatement.Multiline = true;
             this.tbxStatement.Name = "tbxStatement";
+
             this.tbxStatement.Size = new System.Drawing.Size(503, 261);
             this.tbxStatement.TabIndex = 6;
+
             this.tbxStatement.TextChanged += new System.EventHandler(this.tbxStatement_TextChanged);
             // 
             // btnCancel
@@ -106,6 +108,7 @@ namespace Builder
             this.Controls.Add(this.lblFeature);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormModifyRequirement";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "SelectRequirement";
             this.Load += new System.EventHandler(this.FormModifyRequirement_Load);
             this.ResumeLayout(false);
