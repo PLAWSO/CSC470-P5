@@ -27,7 +27,7 @@ namespace Builder
             features = fakeFeatureRepository.GetAll(projectID);
             foreach (Feature feature in features)
             {
-                cbxFeatureSelect.Items.Add(feature);
+                cbxFeatureSelect.Items.Add(feature.Title);
             }
         }
 
@@ -41,7 +41,16 @@ namespace Builder
             requirement.ProjectId = feature.ProjectId;
             requirement.Statement = tbxStatement.Text;
 
-            fakeRequirementRepository.Add(requirement);
+            string message = fakeRequirementRepository.Add(requirement);
+
+            if (message != "")
+            {
+                MessageBox.Show(message);
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

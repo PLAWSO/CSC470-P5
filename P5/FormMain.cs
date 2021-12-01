@@ -74,6 +74,8 @@ namespace P5
                 this.Text = "Main - " + form._SelectedProjectName;
                 selectedProject = form._SelectedProjectName;
             }
+            _CurrentProject.Id = form._SelectedProjectId;
+            _CurrentProject.Name = form._SelectedProjectName;
             form.Dispose();
             return selectedProject;
         }
