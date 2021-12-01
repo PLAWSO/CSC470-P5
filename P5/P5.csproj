@@ -68,6 +68,12 @@
     <Compile Include="FakePreferenceRepository.cs" />
     <Compile Include="FakeProjectRepository.cs" />
     <Compile Include="Feature.cs" />
+    <Compile Include="FormModifyRequirement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifyRequirement.Designer.cs">
+      <DependentUpon>FormModifyRequirement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModifyFeature.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModifyProject.resx">
       <DependentUpon>FormModifyProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifyRequirement.resx">
+      <DependentUpon>FormModifyRequirement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRemoveProject.resx">
       <DependentUpon>FormRemoveProject.cs</DependentUpon>
